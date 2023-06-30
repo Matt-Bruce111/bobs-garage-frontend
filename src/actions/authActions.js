@@ -28,7 +28,7 @@ export const loadUser = () => async dispatch => {
   // Try to load the user
   try {
     // Call the auth endpoint on the server
-    const res = await axios.get('/api/auth')
+    const res = await axios.get('https://bobs-garage-backend.onrender.com/api/auth')
     // Dispatch the response to the reducer
     dispatch({
       type: USER_LOADED,
@@ -51,7 +51,7 @@ export const register = (user) => async dispatch => {
 
   try {
     // Call register endpoint on the server
-    const res = await axios.post('/api/users/register', user)
+    const res = await axios.post('https://bobs-garage-backend.onrender.com/api/users/register', user)
     dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
@@ -78,7 +78,7 @@ export const register = (user) => async dispatch => {
 export const login = (details) => async dispatch => {
   try {
     // Call the login endpoint on the server
-    const res = await axios.post('/api/auth', details)
+    const res = await axios.post('https://bobs-garage-backend.onrender.com/api/auth', details)
 
     // Dispatch the response to the reducer
     dispatch({
