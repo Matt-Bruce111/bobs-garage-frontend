@@ -1,0 +1,278 @@
+body {
+  background-color: var(--body-bg);
+  color: white;
+}
+
+body .card-body{
+  color: var(--text);
+}
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+p, label {
+  transition: all 0.01s ease-in-out;
+}
+
+.nav-link {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-thing {
+  padding-top: .5rem;
+  text-decoration: none;
+  color: var(--text);
+  border-bottom: 8px solid var(--nav-bg);
+}
+
+.nav-thing:hover {
+  transform: scale(105%);
+  transition: 0.3s ease;
+  backface-visibility: hidden;
+}
+
+.active {
+  display:block;
+  height:100%;
+  border-bottom: 8px solid var(--accent-bg);
+  color: var(--text);
+  transition: none;
+} 
+
+.add-content-button {
+  background-color: var(--accent-bg);
+  color: var(--text-accent);
+}
+
+.add-content-button:hover {
+  background-color: var(--accent-bg);
+  color: var(--text-accent);
+}
+
+#notfound{
+  color: var(--text);
+}
+
+/* Header Styling */
+#header {
+  background-color: var(--nav-bg);
+}
+
+#flexSwitchCheckChecked {
+  background-color: var(--accent-bg);
+  border: 0px solid var(--accent-bg);
+}
+
+.form-switch {
+  color: var(--text);
+}
+
+/* Footer Styling */
+#footer {
+  background-color: var(--nav-bg);
+}
+
+#footer ul {
+  list-style-type: none;
+}
+
+#footer h4 {
+  color: var(--text);
+}
+
+#copyright {
+  color: var(--accent-bg);
+}
+
+
+/* Home styling */
+#homecard  {
+  background-color: var(--nav-bg);
+  border: 0px solid white;
+  color: var(--text);
+}
+
+#homecard h3{
+  color: var(--text);
+  border-bottom: 5px solid var(--accent-bg);
+}
+
+#homecard a {
+  color: var(--text-accent);
+  background-color: var(--accent-bg);
+}
+
+/* Service Styling */
+.service-outer {
+  background-color: var(--accent-bg);
+  color: var(--text-accent);
+}
+
+.service-inner {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+.edit-icon {
+  color: var(--accent-bg)
+}
+
+.edit-service {
+  background-color: var(--nav-bg);
+  color: var(--text);
+  border: 0px solid var(--accent-bg);
+}
+
+.edit-service-header{
+  color: var(--text);
+}
+
+
+.edit-service .card-body {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+.add-service {
+  background-color: var(--nav-bg);
+  color: var(--text);
+  border: 0px solid var(--accent-bg);
+}
+
+.add-service-header{
+  color: var(--text);
+}
+
+.add-service .card-body {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+/* Feedback Styling */
+.feedback-outer {
+  background-color: var(--accent-bg);
+  color: var(--text-accent);
+}
+
+.feedback-inner {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+.feedback {
+  background-color: var(--nav-bg);
+  color: var(--text);
+  border: 0px solid var(--accent-bg);
+}
+
+.feedback-header{
+  color: var(--text);
+}
+
+.feedback .card-body {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+/* Post styling */
+.post-outer {
+  background-color: var(--accent-bg);
+  color: var(--text-accent);
+}
+
+.post-inner {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+.post {
+  background-color: var(--nav-bg);
+  color: var(--text);
+  border: 0px solid var(--accent-bg);
+}
+
+.post-header{
+  color: var(--text);
+}
+
+.post .card-body {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+/* About styling */
+#about  {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+#about h3{
+  color: var(--text);
+  border-bottom: 5px solid var(--accent-bg);
+}
+
+/* Staff styling */
+#staffcard {
+  background-color: var(--nav-bg);
+  border: 0px solid white;
+  color: var(--text);
+}
+
+#staffcard h3{
+  color: var(--text);
+  border-bottom: 5px solid var(--accent-bg);
+}
+
+/* Login styling */
+#login{
+  color: var(--text);
+}
+
+
+/* Register styling */
+#register{
+  color: var(--text);
+}
+
+
+/* Banner Styling */
+.banner-img {
+  background-repeat: no-repeat;
+  position: relative;
+  object-fit: cover;
+  object-position: 0% 30%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.text-over-img {
+  z-index: 1;
+  color: white;
+  font-family: "Impact", sans-serif;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+.bobs-garage {
+  background-color: var(--accent-bg);
+  color: var(--text-accent);
+  font-family: "Impact", sans-serif;
+}
+
+h4 {
+  color: aliceblue;
+  font-weight: normal;
+}
+
+/* textarea {
+  background-color: #252528;
+} */

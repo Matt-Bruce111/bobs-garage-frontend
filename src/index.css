@@ -1,0 +1,35 @@
+:root {
+  --body-bg: #252528;
+  --body-bg-light: white;
+}
+
+[data-theme='dark']{
+  --body-bg: #252528;
+  --nav-bg: #202023;
+  --accent-bg: #F7565D;
+  --text: white;
+  --text-accent: aliceblue;
+}
+
+[data-theme='light']{
+  --body-bg: white;
+  --nav-bg: rgb(233, 233, 233);
+  --accent-bg: #0d6efd;
+  --text: black;
+  --text-accent: aliceblue;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
