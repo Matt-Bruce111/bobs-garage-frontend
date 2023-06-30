@@ -18,7 +18,7 @@ export const getServices = () => async dispatch => {
   try {
     // Call the api to get all services
     console.log('Getting services')
-    const res = await axios.get('/api/services')
+    const res = await axios.get('https://bobs-garage-backend.onrender.com/api/services')
   
     // Dispatch the response to the reducer
     dispatch({
@@ -38,7 +38,7 @@ export const getServices = () => async dispatch => {
 export const getService = (id) => async dispatch => {
   try {
     // Call the api to get a single service
-    const res = await axios.get(`/api/services/${id}`)
+    const res = await axios.get(`https://bobs-garage-backend.onrender.com/api/services/${id}`)
     console.log(res)
     // Dispatch the response to the reducer
     dispatch({
@@ -58,7 +58,7 @@ export const getService = (id) => async dispatch => {
 export const addService = (service) => async dispatch => {
   try {
     // Call the api to add a service
-    const res = await axios.post('/api/services', service)
+    const res = await axios.post('https://bobs-garage-backend.onrender.com/api/services', service)
   
     // Dispatch the response to the reducer
     dispatch({
@@ -78,7 +78,7 @@ export const addService = (service) => async dispatch => {
 export const updateService = (service) => async dispatch => {
   try {
     // Call the api to update a service
-    const res = await axios.put(`/api/services/${service.serviceId}`, service)
+    const res = await axios.put(`https://bobs-garage-backend.onrender.com/api/services/${service.serviceId}`, service)
   
     // Dispatch the response to the reducer
     dispatch({
@@ -98,7 +98,7 @@ export const updateService = (service) => async dispatch => {
 export const deleteService = (id) => async dispatch => {
   try {
     // Call the api to delete a service
-    await axios.delete(`/api/services/${id}`)
+    await axios.delete(`https://bobs-garage-backend.onrender.com/api/services/${id}`)
   
     // Dispatch the response to the reducer
     dispatch({
