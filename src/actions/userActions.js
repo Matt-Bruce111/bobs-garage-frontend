@@ -2,7 +2,8 @@
 import {
   GET_USERS,
   GET_USER,
-  GET_ALL
+  GET_ALL,
+  ENVIRONMENT
 } from './types'
 
 // Import axios
@@ -16,7 +17,7 @@ export const getUsers = () => async dispatch => {
 
   // Call the api to get all users
   try {
-    const res = await axios.get('https://bobs-garage-backend.onrender.com/api/users')
+    const res = await axios.get(`${ENVIRONMENT}/api/users`)
     
     // Dispatch to the reducers
     dispatch({
@@ -37,7 +38,7 @@ export const getUser = (id) => async dispatch => {
   console.log('Getting a user')
   try {
     // Call the endpoint
-    const res = await axios.get(`https://bobs-garage-backend.onrender.com/api/users/${id}`)
+    const res = await axios.get(`${ENVIRONMENT}/api/users/${id}`)
 
     // Dispatch to the reducer
     dispatch({
@@ -58,7 +59,7 @@ export const getAll = () => async dispatch => {
   console.log('Getting all users for feedback')
   try {
     // Call the endpoint
-    const res = await axios.get('https://bobs-garage-backend.onrender.com/api/users/all')
+    const res = await axios.get(`${ENVIRONMENT}/api/users/all`)
 
     // Dispatch to the reducer
     dispatch({

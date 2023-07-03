@@ -42,3 +42,8 @@ export const GET_POST = 'GET_POST';
 export const ADD_POST = 'ADD_POST';
 export const UPDATE_POST = 'UPDATE_POST';
 export const DELETE_POST = 'DELETE_POST';
+
+// Production Types
+export const ENVIRONMENT = 'https://bobs-garage-backend.onrender.com';
+// https://bobs-garage-backend.onrender.com
+// http://localhost:3500

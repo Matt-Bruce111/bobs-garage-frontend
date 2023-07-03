@@ -4,7 +4,8 @@ import {
   GET_POST,
   ADD_POST,
   UPDATE_POST,
-  DELETE_POST
+  DELETE_POST,
+  ENVIRONMENT
 } from './types'
 
 // Import axios
@@ -18,7 +19,7 @@ export const getPosts = () => async dispatch => {
   try {
     // Call the api to get all posts
     console.log('Getting blog posts')
-    const res = await axios.get('https://bobs-garage-backend.onrender.com/api/blog')
+    const res = await axios.get(`${ENVIRONMENT}/api/blog`)
   
     // Dispatch the response to the reducer
     dispatch({
@@ -39,7 +40,7 @@ export const getPost = (id) => async dispatch => {
   try {
     // Call the api to get a single service
     console.log('Getting a blog post')
-    const res = await axios.get(`https://bobs-garage-backend.onrender.com/api/blog/${id}`)
+    const res = await axios.get(`${ENVIRONMENT}/api/blog/${id}`)
   
     // Dispatch the response to the reducer
     dispatch({
@@ -59,7 +60,7 @@ export const getPost = (id) => async dispatch => {
 export const addPost = (post) => async dispatch => {
   try {
     // Call the api to add a service
-    const res = await axios.post('https://bobs-garage-backend.onrender.com/api/blog', post)
+    const res = await axios.post(`${ENVIRONMENT}/api/blog`, post)
   
     // Dispatch the response to the reducer
     dispatch({
@@ -81,7 +82,7 @@ export const updatePost = (post) => async dispatch => {
     console.log("Updating a post")
     //console.log(post)
     // Call the api to update a service
-    const res = await axios.put(`https://bobs-garage-backend.onrender.com/api/blog/${post.postId}`, post)
+    const res = await axios.put(`${ENVIRONMENT}/api/blog/${post.postId}`, post)
   
     // Dispatch the response to the reducer
     dispatch({
@@ -101,7 +102,7 @@ export const updatePost = (post) => async dispatch => {
 export const deletePost = (id) => async dispatch => {
   try {
     // Call the api to delete a post
-    await axios.delete(`https://bobs-garage-backend.onrender.com/api/blog/${id}`)
+    await axios.delete(`${ENVIRONMENT}/api/blog/${id}`)
   
     // Dispatch the response to the reducer
     dispatch({
