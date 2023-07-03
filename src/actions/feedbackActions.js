@@ -101,6 +101,7 @@ export const deleteFeedback = (id) => async dispatch => {
   try {
     // Call the endpoint
     const res = await axios.delete(`${ENVIRONMENT}/api/feedback/${id}`)
+    console.log(res)
   
     // Dispatch the response to the reducer.
     dispatch({

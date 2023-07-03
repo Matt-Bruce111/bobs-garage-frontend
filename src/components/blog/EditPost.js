@@ -31,7 +31,7 @@ const EditPost = ({ singlePost, getPost, updatePost }) => {
         title: singlePost.title,
         body: singlePost.body,
       })
-  }, [getPost, id, singlePost.body])
+  }, [getPost, id, singlePost.body, singlePost.title])
 
   const { body, title, } = formData
 

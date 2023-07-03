@@ -1,5 +1,5 @@
 // Import required modules
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { connect, useSelector } from 'react-redux'
@@ -38,7 +38,7 @@ const SingleFeedback = ({ singleFeedback, deleteFeedback, user }) => {
   return (
     <div className='row w-100 text-light mx-0 my-4 border border-dark border-opacity-10 rounded-4 overflow-hidden' style={{height: '200px'}}>
       <div className='col-2 fs-4 px-0 pt-4 d-inline text-center feedback-outer' style={{'min-width': '120px'}}>
-          <img src={user[0].image} className='border border-dark border-opacity-10 rounded-circle overflow-hidden' style={{width: '80px', height: '80px'}}></img>
+          <img src={user[0].image} alt='profile' className='border border-dark border-opacity-10 rounded-circle overflow-hidden' style={{width: '80px', height: '80px'}}></img>
           <p className='text-center my-4 mx-auto px-2'>{user[0].firstName}{' '}{user[0].lastName}</p>
       </div>
 

@@ -1,8 +1,8 @@
-import { React, useRef} from 'react'
+import { React } from 'react'
 import PropTypes from 'prop-types'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { connect, useSelector } from 'react-redux'
-import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
 
 // Import logout action
 import { logout } from '../../actions/authActions';
@@ -16,7 +16,7 @@ const Header = ({ logout }) => {
   // Get the auth state
   const isAuthenticated = state.auth.isAuthenticated;
 
-  // Set the sign in/out link
+  // Init the sign in/out link variable
   var signInOut;
   
   // If user is authenticated, show logout link, else show sign in link
@@ -26,24 +26,27 @@ const Header = ({ logout }) => {
     signInOut = <NavLink className="nav-thing" to="/login">Sign In</NavLink>
   }
 
+  // Set Dark Mode, save the theme to local storage
   const setDarkMode = () => {
     document.querySelector('body').setAttribute('data-theme', 'dark')
     localStorage.setItem('theme', 'dark')
   }
 
+  // Set Light Mode, save the theme to local storage
   const setLightMode = () => {
     document.querySelector('body').setAttribute('data-theme', 'light')
     localStorage.setItem('theme', 'light')
   }
 
+  // Check local storage for theme, if dark set dark mode, else set light mode
   const theme = localStorage.getItem('theme')
-
   if(theme === 'dark'){
     setDarkMode()
   } else {
     setLightMode()
   }
 
+  // Toggle theme function
   const toggleTheme = (e) => {
     if(e.target.checked){
       setDarkMode()
