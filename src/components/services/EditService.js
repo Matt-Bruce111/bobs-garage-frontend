@@ -74,8 +74,8 @@ const EditService = ({
 
   return (
     <Fragment>
-        <h2 className='text-center p-3 edit-service-header'>Edit Service</h2>
-        <div className='card mb-3 edit-service border-opacity-10 rounded-4 overflow-hidden'>
+        <h2 className='text-center p-3 header'>Edit Service</h2>
+        <div className='card mb-3 dynamic border-opacity-10 rounded-4 overflow-hidden'>
           <div className='card-body'>
             <form onSubmit={e => onSubmit(e)}>
               <div className='m-3 fs-5 text-center justify-content-center'>

@@ -35,14 +35,14 @@ const SinglePost = ({ singlePost, deletePost }) => {
   }
 
   return (
-    <div className='row w-100 position-relative text-light mx-0 my-4 border border-dark border-opacity-10 rounded-4 overflow-hidden'>
-      <div className='fs-3 position-relative post-outer'>
+    <div className='row w-100 position-relative text-light mx-0 my-4 rounded-4 overflow-hidden'>
+      <div className='fs-3 position-relative outer'>
         <h2 className='text-center my-2'>{title}</h2>
         <p className='position-absolute top-0 start-0 p-3 fs-5'>{formattedDate}</p>
         {adminPostButtons}
       </div>
 
-      <div className='fs-5 post-inner'>
+      <div className='fs-5 inner'>
           <p className='text-center m-3'>{body}</p>
       </div>
     </div>

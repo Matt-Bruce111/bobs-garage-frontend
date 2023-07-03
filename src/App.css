@@ -15,6 +15,12 @@ p, label {
   transition: all 0.01s ease-in-out;
 }
 
+h3{
+  color: var(--text);
+  border-bottom: 5px solid var(--accent-bg);
+  transition: all 0.01s ease-in-out;
+}
+
 .nav-link {
   color: var(--text);
   text-decoration: none;
@@ -51,8 +57,36 @@ p, label {
   color: var(--text-accent);
 }
 
+
+
 #notfound{
   color: var(--text);
+}
+
+/* Dynamic content styling */
+.outer {
+  background-color: var(--accent-bg);
+  color: var(--text-accent);
+}
+
+.inner {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+.header{
+  color: var(--text);
+}
+
+.card-body {
+  background-color: var(--nav-bg);
+  color: var(--text);
+}
+
+.dynamic {
+  background-color: var(--nav-bg);
+  color: var(--text);
+  border: 0px solid var(--accent-bg);
 }
 
 /* Header Styling */
@@ -91,12 +125,8 @@ p, label {
 #homecard  {
   background-color: var(--nav-bg);
   border: 0px solid white;
+  border-radius: 1rem;
   color: var(--text);
-}
-
-#homecard h3{
-  color: var(--text);
-  border-bottom: 5px solid var(--accent-bg);
 }
 
 #homecard a {
@@ -105,101 +135,8 @@ p, label {
 }
 
 /* Service Styling */
-.service-outer {
-  background-color: var(--accent-bg);
-  color: var(--text-accent);
-}
-
-.service-inner {
-  background-color: var(--nav-bg);
-  color: var(--text);
-}
-
 .edit-icon {
   color: var(--accent-bg)
-}
-
-.edit-service {
-  background-color: var(--nav-bg);
-  color: var(--text);
-  border: 0px solid var(--accent-bg);
-}
-
-.edit-service-header{
-  color: var(--text);
-}
-
-
-.edit-service .card-body {
-  background-color: var(--nav-bg);
-  color: var(--text);
-}
-
-.add-service {
-  background-color: var(--nav-bg);
-  color: var(--text);
-  border: 0px solid var(--accent-bg);
-}
-
-.add-service-header{
-  color: var(--text);
-}
-
-.add-service .card-body {
-  background-color: var(--nav-bg);
-  color: var(--text);
-}
-
-/* Feedback Styling */
-.feedback-outer {
-  background-color: var(--accent-bg);
-  color: var(--text-accent);
-}
-
-.feedback-inner {
-  background-color: var(--nav-bg);
-  color: var(--text);
-}
-
-.feedback {
-  background-color: var(--nav-bg);
-  color: var(--text);
-  border: 0px solid var(--accent-bg);
-}
-
-.feedback-header{
-  color: var(--text);
-}
-
-.feedback .card-body {
-  background-color: var(--nav-bg);
-  color: var(--text);
-}
-
-/* Post styling */
-.post-outer {
-  background-color: var(--accent-bg);
-  color: var(--text-accent);
-}
-
-.post-inner {
-  background-color: var(--nav-bg);
-  color: var(--text);
-}
-
-.post {
-  background-color: var(--nav-bg);
-  color: var(--text);
-  border: 0px solid var(--accent-bg);
-}
-
-.post-header{
-  color: var(--text);
-}
-
-.post .card-body {
-  background-color: var(--nav-bg);
-  color: var(--text);
 }
 
 /* About styling */
@@ -208,21 +145,12 @@ p, label {
   color: var(--text);
 }
 
-#about h3{
-  color: var(--text);
-  border-bottom: 5px solid var(--accent-bg);
-}
-
 /* Staff styling */
 #staffcard {
   background-color: var(--nav-bg);
   border: 0px solid white;
+  border-radius: 1rem;
   color: var(--text);
-}
-
-#staffcard h3{
-  color: var(--text);
-  border-bottom: 5px solid var(--accent-bg);
 }
 
 /* Login styling */
@@ -230,12 +158,10 @@ p, label {
   color: var(--text);
 }
 
-
 /* Register styling */
 #register{
   color: var(--text);
 }
-
 
 /* Banner Styling */
 .banner-img {
@@ -259,9 +185,6 @@ p, label {
   transform: translate(-50%, -50%);
 }
 
-
-
-
 .bobs-garage {
   background-color: var(--accent-bg);
   color: var(--text-accent);
@@ -272,7 +195,3 @@ h4 {
   color: aliceblue;
   font-weight: normal;
 }
-
-/* textarea {
-  background-color: #252528;
-} */

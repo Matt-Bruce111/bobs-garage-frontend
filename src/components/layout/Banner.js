@@ -8,8 +8,8 @@ import React from 'react'
 
 const Banner = ({ img, text }) => {
   return (
-    <div className='container-lg justify-content-center px-0 my-4' style={{height: '300px'}}>
-      <div className='banner-img border border-dark border-opacity-10 rounded-4 overflow-hidden'>
+    <div className='container-lg justify-content-center px-0 mb-4' style={{height: '300px'}}>
+      <div className='banner-img rounded-4 overflow-hidden'>
         <img src={img} alt='banner' className='banner-img'/>
         <div className='text-over-img'>{ text }</div>
       </div>

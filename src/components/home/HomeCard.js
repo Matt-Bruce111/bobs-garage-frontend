@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const HomeCard = ({ title, body, link }) => {
   return (
-    <div className='card mb-4 text-center d-flex justify-content-center' id='homecard'>
+    <div className='card pb-4 text-center d-flex justify-content-center h-100' id='homecard'>
       <div className='card-body w-75 mx-auto' >
         <h3 className='card-title mx-auto w-75'>{title}</h3>
         <p className='my-4 fs-5'>{body}</p>

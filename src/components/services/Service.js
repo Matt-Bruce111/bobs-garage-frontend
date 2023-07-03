@@ -25,17 +25,17 @@ const Service = ({ oneService }) => {
   }
 
   return (
-    <div className='row w-100 text-light mx-0 my-4 border border-dark border-opacity-10 rounded-4 overflow-hidden' style={{height: '200px', 'maxHeight': '200px'}}>
-      <div className='col-2 d-flex fs-4 px-0 service-outer' style={{'min-width': '110px'}}>
+    <div className='row w-100 text-light mx-0 my-4 rounded-4 overflow-hidden' style={{height: '200px', 'maxHeight': '200px'}}>
+      <div className='col-2 d-flex fs-4 px-0 outer' style={{'min-width': '110px'}}>
         <p className='text-center my-auto mx-auto px-2'>{service}</p>
       </div>
 
-      <div className='col d-flex position-relative fs-5 service-inner'>
+      <div className='col d-flex position-relative fs-5 inner'>
           <p className='text-center m-auto px-2'>{description}</p>
           {editServiceButton}
       </div>
 
-      <div className='col-2 d-flex fs-4 px-0 service-outer' style={{'min-width': '110px'}}>
+      <div className='col-2 d-flex fs-4 px-0 outer' style={{'min-width': '110px'}}>
         <p className='text-center my-auto mx-auto px-2'>${price}</p>
       </div>
     </div>

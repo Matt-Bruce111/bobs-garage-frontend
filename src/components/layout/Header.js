@@ -57,7 +57,7 @@ const Header = ({ logout }) => {
 
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" className='m-0 p-0 border-dark border-opacity-10 rounded-bottom-4 overflow-hidden' id='header'>
+      <Navbar collapseOnSelect expand="lg" className='m-0 p-0 rounded-bottom-4 overflow-hidden' id='header'>
         <Container className='p-0 m-0'>
           <div className='d-flex bobs-garage' style={{width: '200px', height: '125px'}}>
             <Navbar.Brand href="/home" className='p-0 align-items-center my-auto mx-auto'><h2 className='my-0 mx-2 text-center bobs-garage'>Bob's Garage</h2></Navbar.Brand>
@@ -77,7 +77,7 @@ const Header = ({ logout }) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div class="form-check form-switch">
+      <div class="form-check form-switch py-2">
         <input class="form-check-input" type="checkbox" role="switch" onChange={toggleTheme} defaultChecked={theme ==='dark'}id="flexSwitchCheckChecked" />
         <label className='theme-switch' for="flexSwitchCheckChecked">Toggle Light/Dark Mode</label>
       </div>

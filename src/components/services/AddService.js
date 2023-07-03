@@ -99,8 +99,8 @@ const AddService = ({ addService }) => {
 
   return (
     <Fragment>
-      <h2 className='text-center add-service-header p-3'>Add Service</h2>
-      <div className='card mb-3 add-service border-opacity-10 rounded-4 overflow-hidden'>
+      <h2 className='text-center header p-3'>Add Service</h2>
+      <div className='card mb-3 dynamic border-opacity-10 rounded-4 overflow-hidden'>
         <div className='card-body'>
           <form onSubmit={e => onSubmit(e)}>
             <div className='mb-3 fs-5 text-center justify-content-center'>

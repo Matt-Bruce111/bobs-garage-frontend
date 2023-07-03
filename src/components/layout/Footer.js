@@ -5,7 +5,7 @@ import { BsYoutube, BsFacebook, BsInstagram } from 'react-icons/bs'
 
 const Footer = () => {
   return (
-    <nav className="navbar navbar-expand-lg mt-auto border-dark border-opacity-10 rounded-top-4 overflow-hidden" id='footer'>
+    <nav className="navbar navbar-expand-lg mt-auto rounded-top-4 overflow-hidden" id='footer'>
       <div className="container-fluid">
 
         {/* Copyright piece is seperated from the rest of the ul */}

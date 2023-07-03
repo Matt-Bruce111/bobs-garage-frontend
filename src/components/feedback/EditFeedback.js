@@ -66,8 +66,8 @@ const EditFeedback = ({ singleFeedback, getSingleFeedback, updateFeedback }) => 
 
   return (
     <Fragment>
-      <h2 className='text-center feedback-header p-3'>Edit Feedback</h2>
-      <div className='card mb-3 feedback border-dark rounded-4 overflow-hidden' style={{backgroundColor: '#202023'}}>
+      <h2 className='text-center header p-3'>Edit Feedback</h2>
+      <div className='card mb-3 dynamic border-dark rounded-4 overflow-hidden' style={{backgroundColor: '#202023'}}>
         <div className='card-body'>
           <form onSubmit={e => onSubmit(e)}>
             <div className='mb-3 fs-5 text-center justify-content-center'>
