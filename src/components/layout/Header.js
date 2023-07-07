@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { NavLink } from 'react-router-dom'
 import { connect, useSelector } from 'react-redux'
 import { Container, Navbar, Nav } from 'react-bootstrap';
+import { FaCarAlt } from 'react-icons/fa';
 
 // Import logout action
 import { logout } from '../../actions/authActions';
@@ -60,7 +61,7 @@ const Header = ({ logout }) => {
       <Navbar collapseOnSelect expand="lg" className='m-0 p-0 rounded-bottom-4 overflow-hidden' id='header'>
         <Container className='p-0 m-0'>
           <div className='d-flex bobs-garage' style={{width: '200px', height: '125px'}}>
-            <Navbar.Brand href="/home" className='p-0 align-items-center my-auto mx-auto'><h2 className='my-0 mx-2 text-center bobs-garage'>Bob's Garage</h2></Navbar.Brand>
+            <Navbar.Brand href="/home" className='p-0 text-center my-auto mx-auto'><FaCarAlt style={{fontSize: '4rem', color: 'white'}}/><h2 className='my-0 mx-2 text-center bobs-garage'>Bob's Garage</h2></Navbar.Brand>
           </div>
           
           <Navbar.Toggle className='me-4' aria-controls="responsive-navbar-nav" style={{width: '75px', height: '75px'}} />
