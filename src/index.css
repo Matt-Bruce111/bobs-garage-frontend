@@ -8,7 +8,7 @@
   --nav-bg: #202023;
   --accent-bg: #F7565D;
   --text: white;
-  --text-accent: aliceblue;
+  --text-accent: white;
 }
 
 [data-theme='light']{
@@ -16,7 +16,7 @@
   --nav-bg: rgb(233, 233, 233);
   --accent-bg: #0d6efd;
   --text: black;
-  --text-accent: aliceblue;
+  --text-accent: white;
 }
 
 

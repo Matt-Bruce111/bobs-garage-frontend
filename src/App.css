@@ -187,11 +187,11 @@ h3{
 
 .bobs-garage {
   background-color: var(--accent-bg);
-  color: var(--text-accent);
+  color: white;
   font-family: "Impact", sans-serif;
 }
 
 h4 {
-  color: aliceblue;
+  color: white;
   font-weight: normal;
 }
