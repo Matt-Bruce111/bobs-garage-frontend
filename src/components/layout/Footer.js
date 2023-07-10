@@ -12,10 +12,10 @@ const Footer = () => {
         <ul className="navbar-nav w-100 mx-4 my-3 justify-content-between">
           <li className="nav-item d-flex justify-content-around">
             <h5 className='align-items-center' id='copyright'>Copyright 2023</h5>
-            <div className='d-inline-block px-5'>
-              <BsFacebook className='edit-icon mx-3 fs-3'/>
-              <BsInstagram className='edit-icon mx-3 fs-3'/>
-              <BsYoutube className='edit-icon mx-3 fs-2'/>
+            <div className='d-flex flex-wrap ps-5'>
+              <BsFacebook className='edit-icon mx-2 fs-3'/>
+              <BsInstagram className='edit-icon mx-2 fs-3'/>
+              <BsYoutube className='edit-icon mx-2 fs-3'/>
             </div>
           </li>
 
