@@ -10,7 +10,7 @@ const Footer = () => {
 
         {/* Copyright piece is seperated from the rest of the ul */}
         <ul className="navbar-nav w-100 mx-4 my-3 justify-content-between">
-          <li className="nav-item d-flex justify-content-around">
+          <li className="nav-item d-flex justify-content-around pt-3">
             <h5 className='align-items-center' id='copyright'>Copyright 2023</h5>
             <div className='d-flex flex-wrap ps-5'>
               <BsFacebook className='edit-icon mx-2 fs-3'/>
