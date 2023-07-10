@@ -8,7 +8,7 @@ const Alert = ({ alerts }) => {
   return (alerts !== null && alerts.length > 0 && alerts.map( alert =>
     // The alert-type will determine the colour of the alert.
     (
-      <div key={alert.id} className={`mt-4 alert alert-${alert.alertType}`} >
+      <div key={alert.id} className={`alert alert-${alert.alertType}`} >
         {alert.msg}
       </div>
     ))

@@ -25,7 +25,7 @@ const Service = ({ oneService }) => {
   }
 
   return (
-    <div className='row w-100 text-light mx-0 my-4 rounded-4 overflow-hidden' style={{height: '200px', 'maxHeight': '200px'}}>
+    <div className='row w-100 text-light mx-0 my-4 rounded-4 overflow-hidden' style={{minHeight: '200px'}}>
       <div className='col-2 d-flex fs-4 px-0 outer' style={{'min-width': '110px'}}>
         <p className='text-center my-auto mx-auto px-2'>{service}</p>
       </div>

@@ -22,7 +22,7 @@ const Header = ({ logout }) => {
   
   // If user is authenticated, show logout link, else show sign in link
   if(isAuthenticated){
-    signInOut = <NavLink onClick={logout} className="nav-thing" to="/">Logout</NavLink>
+    signInOut = <NavLink onClick={logout} className="nav-thing" to="/home" style={{border: '0px'}}>Logout</NavLink>
   } else {
     signInOut = <NavLink className="nav-thing" to="/login">Sign In</NavLink>
   }
@@ -58,15 +58,14 @@ const Header = ({ logout }) => {
 
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" className='m-0 p-0 rounded-bottom-4 overflow-hidden' id='header'>
-        <Container className='p-0 m-0'>
+      <Navbar collapseOnSelect expand="lg" className='m-0 p-0 w-100 rounded-bottom-4 overflow-hidden d-flex justify-content-between' id='header'>
           <div className='d-flex bobs-garage' style={{width: '200px', height: '125px'}}>
             <Navbar.Brand href="/home" className='p-0 text-center my-auto mx-auto'><FaCarAlt style={{fontSize: '4rem', color: 'white'}}/><h2 className='my-0 mx-2 text-center bobs-garage'>Bob's Garage</h2></Navbar.Brand>
           </div>
           
           <Navbar.Toggle className='me-4' aria-controls="responsive-navbar-nav" style={{width: '75px', height: '75px'}} />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="d-flex justify-content-between text-center mx-4 w-100 fs-4">
+            <Nav className="d-flex justify-content-between w-100 text-center fs-4">
               <NavLink className="nav-thing hover-border" activeClassName="active"  to="/home">Home</NavLink>
               <NavLink className="nav-thing hover-border" activeClassName="active"  to="/services">Services</NavLink>
               <NavLink className="nav-thing hover-border" activeClassName="active"  to="/about">About</NavLink>
@@ -76,7 +75,6 @@ const Header = ({ logout }) => {
               {signInOut}
             </Nav>
           </Navbar.Collapse>
-        </Container>
       </Navbar>
       <div class="form-check form-switch py-2">
         <input class="form-check-input" type="checkbox" role="switch" onChange={toggleTheme} defaultChecked={theme ==='dark'}id="flexSwitchCheckChecked" />
