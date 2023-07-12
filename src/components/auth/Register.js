@@ -30,18 +30,37 @@ const Register = ({register}) => {
   const [imageUpload, setImageUpload] = useState(null)
 
   // Upload image 
-  const uploadImage = async () => {
-    if(imageUpload == null) return;
-    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`)
-    await uploadBytes(imageRef, imageUpload).then(async () => {
-      await getDownloadURL(imageRef).then((url) => {
-        console.log(url)
-        console.log('Image Uploaded')
-        image = url
-      })
-    })
-  }
+  // const uploadImage = async () => {
+  //   if(imageUpload == null) return;
+  //   const imageRef = ref(storage, `images/${imageUpload.name + v4()}`)
+  //   await uploadBytes(imageRef, imageUpload).then(async () => {
+  //     await getDownloadURL(imageRef).then((url) => {
+  //       console.log(url)
+  //       console.log('Image Uploaded')
+  //       image = url
+  //     })
+  //   })
+  // }
 
+  const uploadImage = async () => {
+    // Check if image is null, if so, return
+    if(imageUpload == null) return;
+
+    // Create a reference to the image
+    const imageRef = ref(storage, `images/${imageUpload.name + v4()}`)
+
+    // Upload the image
+    await uploadBytes(imageRef, imageUpload)
+
+    // Get the image URL using the image reference
+    const url = await getDownloadURL(imageRef)
+
+    // Log the image url, and set the image state
+    console.log(url)
+    console.log('Image Uploaded')
+    image = url
+    }
+  
   // Set up navigate hook
   const navigate = useNavigate();
 
