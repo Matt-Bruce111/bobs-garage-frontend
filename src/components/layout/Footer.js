@@ -13,9 +13,9 @@ const Footer = () => {
           <li className="nav-item d-flex justify-content-around pt-3">
             <h5 className='align-items-center' id='copyright'>Copyright 2023</h5>
             <div className='d-flex flex-wrap ps-5'>
-              <BsFacebook className='edit-icon mx-2 fs-3'/>
-              <BsInstagram className='edit-icon mx-2 fs-3'/>
-              <BsYoutube className='edit-icon mx-2 fs-3'/>
+              <Link to='https://www.facebook.com/'><BsFacebook className='edit-icon mx-2 fs-3'/></Link>
+              <Link to='https://www.instagram.com/'><BsInstagram className='edit-icon mx-2 fs-3'/></Link>
+              <Link to='https://www.youtube.com/'><BsYoutube className='edit-icon mx-2 fs-3'/></Link>
             </div>
           </li>
 
@@ -60,8 +60,8 @@ const Footer = () => {
           <li className="p-3">
             <ul className="navbar-nav d-block text-start">
               <li className="nav-item"><h4>Account</h4></li>
-              <Link className="nav-link px-0" to="/account">Login</Link>
-              <Link className="nav-link px-0" to="/account">Register</Link>
+              <Link className="nav-link px-0" to="/login">Login</Link>
+              <Link className="nav-link px-0" to="/register">Register</Link>
             </ul>
           </li>
           </ul >

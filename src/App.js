@@ -50,7 +50,7 @@ const App = () => {
   return (
     <Provider store={store}>
       <Router>
-        <div className='container-lg min-vh-100'>
+        <div className='container-lg d-flex flex-column min-vh-100'>
           <Header />
           <Alert />
           <Routes>
