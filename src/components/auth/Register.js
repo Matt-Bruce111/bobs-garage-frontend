@@ -11,7 +11,7 @@ import { v4 } from 'uuid'
 import { register } from '../../actions/authActions'
 
 // Destructure props
-const Register = ({register, isAuthenticated}) => {
+const Register = ({register}) => {
   // Set up state
   const [formData, setFormData] = useState({
     firstName: '',
@@ -23,6 +23,9 @@ const Register = ({register, isAuthenticated}) => {
     errors: {}
   })
 
+  // Destructure state
+  var { firstName, lastName, email, image, password, passwordCompare, errors } = formData
+
   // Create image state
   const [imageUpload, setImageUpload] = useState(null)
 
@@ -30,18 +33,14 @@ const Register = ({register, isAuthenticated}) => {
   const uploadImage = async () => {
     if(imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`)
-    uploadBytes(imageRef, imageUpload).then(() => {
-      getDownloadURL(imageRef).then((url) => {
+    await uploadBytes(imageRef, imageUpload).then(async () => {
+      await getDownloadURL(imageRef).then((url) => {
         console.log(url)
-        setFormData({ ...formData, image: url })
-        alert('Image uploaded successfully')
+        console.log('Image Uploaded')
+        image = url
       })
-      
     })
   }
-
-  // Destructure state
-  const { firstName, lastName, email, image, password, passwordCompare, errors } = formData
 
   // Set up navigate hook
   const navigate = useNavigate();
@@ -53,6 +52,7 @@ const Register = ({register, isAuthenticated}) => {
   const onSubmit = async (e) => {
     // Prevent refresh
     e.preventDefault()
+
     console.log('On Submit Called - REGISTER')
 
     // Error checking
@@ -86,8 +86,6 @@ const Register = ({register, isAuthenticated}) => {
 
     // Upload image
     await uploadImage()
-    console.log(image)
-    console.log('Image uploaded')
 
     // Create a user object
     const user = { firstName, lastName, email, image, password }
@@ -97,7 +95,7 @@ const Register = ({register, isAuthenticated}) => {
     await register(user)
 
     // Redirect back to home page
-    navigate('/login')
+    navigate('/home')
   }
 
   return (
@@ -133,17 +131,6 @@ const Register = ({register, isAuthenticated}) => {
             {errors.lastName && <div className='invalid-feedback'>{errors.lastName}</div>}
           </div>
           <div className='mb-2'>
-            {/* <label htmlFor='image' className='text-light'>Image</label>
-            <input 
-              type='text'
-              className={`form-control ${errors.image ? "is-invalid" : 'is-valid'}`}
-              id='image'
-              placeholder='Image'
-              name='image'
-              value={image} 
-              onChange={e => onChange(e)}
-            />
-            {errors.image && <div className='invalid-feedback'>{errors.image}</div>} */}
             <label htmlFor='image'>Image</label>
             <input 
               type='file'
@@ -154,9 +141,6 @@ const Register = ({register, isAuthenticated}) => {
               //value={image} 
               onChange={(e) => {setImageUpload(e.target.files[0])}}
             />
-            <div className='d-grid pt-3 w-25 mx-auto'>
-              <input onClick={uploadImage} value='Upload Image' className='btn add-content-button'/>
-            </div>
             {errors.image && <div className='invalid-feedback'>{errors.image}</div>}
           </div>
           <div className='mb-2'>
