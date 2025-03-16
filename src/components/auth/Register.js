@@ -48,7 +48,7 @@ const Register = ({register}) => {
 
     // Create a reference to the image
     const imageRef = ref(storage, `images/${imageUpload.name + v4()}`)
-
+    
     // Upload the image
     await uploadBytes(imageRef, imageUpload)
 
